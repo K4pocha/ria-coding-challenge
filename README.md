@@ -5,7 +5,7 @@
 A modern, responsive currency exchange application built for the **Ria Software Engineer Internship** coding challenge. The application adheres to Ria's brand identity and focuses on code quality, user experience, and performance.
 
 ## 🚀 Live Demo
-**[https://ria-coding-challenge.vercel.app/]**
+**[https://ria-coding-challenge.vercel.app/](https://ria-coding-challenge.vercel.app/)**
 
 ## ✨ Features
 
@@ -34,7 +34,7 @@ I implemented a **Dynamic Historical Chart** with adjustable time ranges.
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/K4pocha/ria-currency-dashboard.git](https://github.com/K4pocha/ria-currency-dashboard.git)
+    git clone https://github.com/K4pocha/ria-currency-dashboard.git
     cd ria-currency-dashboard
     ```
 
@@ -61,7 +61,7 @@ I implemented a **Dynamic Historical Chart** with adjustable time ranges.
 In transparency and accordance with the challenge guidelines, I utilized AI tools as a **Pair Programmer** to enhance productivity while maintaining full ownership of the logic and implementation.
 
 **Tools used:**
-* **Gemini:** Used for architectural decisions, troubleshooting CSS configurations (Tailwind).
+* **Gemini:** Used for architectural decisions and troubleshooting CSS configurations (Tailwind).
 * **GitHub Copilot:** Used for code autocompletion, generating boilerplate TypeScript interfaces, and speeding up syntax writing.
 
 **How I used them:**
@@ -71,4 +71,4 @@ In transparency and accordance with the challenge guidelines, I utilized AI tool
 
 ---
 
-**Developed by [Nicolás Oñate]**
+**Developed by Nicolás Oñate**
