@@ -56,6 +56,22 @@ I implemented a **Dynamic Historical Chart** with adjustable time ranges.
     * *Decision:* I strictly adhered to the technical requirements rather than switching to a non-specified API. In a production environment, I would integrate a paid provider (like Xe or OXR) to support global currencies including CLP.
 * **Client-Side Fetching:** Data is fetched client-side for simplicity and interactivity in this demo. For a high-traffic production app, I would implement Server-Side Rendering (SSR) or React Query caching strategies to optimize API calls.
 
+## 🔮 Future Improvements
+
+If I had more time, I would focus on bridging the gap between this technical demo and a production-ready product:
+
+1.  **Global Currency Coverage (API Migration):**
+    Currently, the app relies on the Frankfurter API (ECB data), which lacks support for many Latin American and Asian currencies (e.g., CLP, ARS, COP). I would migrate to a comprehensive provider like **OER (Open Exchange Rates)** or **Xe** to ensure 100% global coverage, allowing users to send money or compare to any country in the world.
+
+2.  **Real Commercial Cost Integration:**
+    To make this tool truly useful for Ria customers, I would integrate **Ria's proprietary API** to fetch actual commercial exchange rates and calculate precise transfer fees based on the destination country and payment method, rather than just showing mid-market reference rates.
+
+3.  **Testing Strategy:**
+    I would implement **Unit Tests** (using Jest/React Testing Library) for critical components like the `CurrencyConverter` and **End-to-End (E2E) tests** (using Cypress or Playwright) to ensure the user flow works perfectly across different devices.
+
+4.  **Internationalization (i18n):**
+    Since money transfer is a global business, I would add support for multiple languages (Spanish, French, etc.) using `next-intl`, automatically detecting the user's browser language.
+
 ## 🤖 AI Usage Declaration
 
 In transparency and accordance with the challenge guidelines, I utilized AI tools as a **Pair Programmer** to enhance productivity while maintaining full ownership of the logic and implementation.
