@@ -19,9 +19,10 @@ export default function HistoricalChart() {
     const [target, setTarget] = useState('EUR');
     const [currencies, setCurrencies] = useState<Currencies>({});
     const [loading, setLoading] = useState(true);
-    const [days, setDays] = useState(90); // 3 Meses por defecto
+    const [days, setDays] = useState(7); // 1 semana x defecto
 
     const periods = [
+        { label: '1S', value: 7 },
         { label: '1M', value: 30 },
         { label: '3M', value: 90 },
         { label: '6M', value: 180 },
