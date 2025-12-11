@@ -41,7 +41,7 @@ export default function HistoricalChart() {
   }, [base, target]);
 
   return (
-    <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100 mt-8">
+    <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
       <h2 className="text-2xl font-bold text-gray-800 mb-6">Tendencia Histórica (30 días)</h2>
       
       {/* Selectores */}
@@ -77,8 +77,8 @@ export default function HistoricalChart() {
             <AreaChart data={data}>
               <defs>
                 <linearGradient id="colorRate" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="5%" stopColor="#2563eb" stopOpacity={0.8}/>
-                  <stop offset="95%" stopColor="#2563eb" stopOpacity={0}/>
+                  <stop offset="5%" stopColor="#ea580c" stopOpacity={0.8}/>
+                  <stop offset="95%" stopColor="#ea580c" stopOpacity={0}/>
                 </linearGradient>
               </defs>
               <CartesianGrid strokeDasharray="3 3" vertical={false} />
@@ -98,7 +98,7 @@ export default function HistoricalChart() {
               <Area 
                 type="monotone" 
                 dataKey="rate" 
-                stroke="#2563eb" 
+                stroke="#ea580c" 
                 fillOpacity={1} 
                 fill="url(#colorRate)" 
               />

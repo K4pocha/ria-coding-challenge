@@ -40,6 +40,11 @@ export default function CurrencyConverter() {
     }
   };
 
+  const handleSwap = () => {
+    setFrom(to);
+    setTo(from);
+  };
+
   // Renderizado del UI 
   return (
     <div className="bg-white p-6 rounded-lg shadow-md max-w-md w-full mx-auto border border-gray-100">
@@ -52,19 +57,19 @@ export default function CurrencyConverter() {
           type="number"
           value={amount}
           onChange={(e) => setAmount(Number(e.target.value))}
-          className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none"
+          className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-orange-500 focus:outline-none"
           min="0"
         />
       </div>
 
       {/* Selectores de Moneda */}
-      <div className="grid grid-cols-2 gap-4 mb-6">
-        <div>
+      <div className="flex flex-col sm:flex-row items-end gap-4 mb-6 relative">
+        <div className="flex-1 w-full">
           <label className="block text-sm font-medium text-gray-700 mb-1">De</label>
           <select
             value={from}
             onChange={(e) => setFrom(e.target.value)}
-            className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none"
+            className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-orange-500 focus:outline-none"
           >
             {Object.entries(currencies).map(([code, name]) => (
               <option key={code} value={code}>
@@ -74,12 +79,25 @@ export default function CurrencyConverter() {
           </select>
         </div>
 
-        <div>
+        {/* Boton swap */}
+        <div className="flex justify-center -mb-1">
+          <button
+            onClick={handleSwap}
+            className="p-2 bg-gray-100 rounded-full hover:bg-gray-200 text-gray-600 transition-colors border border-gray-200"
+            title="Intercambiar monedas"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M7.5 21 3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5" />
+            </svg>
+          </button>
+        </div>
+
+        <div className="flex-1 w-full">
           <label className="block text-sm font-medium text-gray-700 mb-1">A</label>
           <select
             value={to}
             onChange={(e) => setTo(e.target.value)}
-            className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none"
+            className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-orange-500 focus:outline-none"
           >
             {Object.entries(currencies).map(([code, name]) => (
               <option key={code} value={code}>
@@ -94,7 +112,7 @@ export default function CurrencyConverter() {
       <button
         onClick={handleConvert}
         disabled={loading}
-        className="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors disabled:bg-blue-300 font-medium"
+        className="w-full bg-orange-600 text-white py-2 rounded-md hover:bg-orange-700 transition-colors disabled:bg-orange-300 font-medium"
       >
         {loading ? 'Convirtiendo...' : 'Convertir'}
       </button>

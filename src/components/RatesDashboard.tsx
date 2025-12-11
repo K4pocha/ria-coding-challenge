@@ -49,7 +49,7 @@ export default function RatesDashboard() {
           <select
             value={base}
             onChange={(e) => setBase(e.target.value)}
-            className="p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 outline-none text-sm"
+            className="p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-orange-500 outline-none text-sm"
           >
             {Object.keys(currencies).map((code) => (
               <option key={code} value={code}>
@@ -62,7 +62,7 @@ export default function RatesDashboard() {
 
       {loading ? (
         <div className="flex justify-center py-10">
-            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
+            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-orange-600"></div>
         </div>
       ) : error ? (
         <div className="text-center py-10 text-red-500">{error}</div>
