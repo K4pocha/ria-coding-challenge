@@ -1,4 +1,5 @@
-import CurrencyConverter from '@/components/CurrencyConverter'; 
+import CurrencyConverter from '@/components/CurrencyConverter';
+import RatesDashboard from '@/components/RatesDashboard';
 
 export default function Home() {
   return (
@@ -9,8 +10,13 @@ export default function Home() {
           <p className="text-gray-600">Internship Coding Challenge</p>
         </div>
 
-        {/* render componente */}
-        <CurrencyConverter />
+        {/* Converter Sec */}
+        <div className="mb-8">
+            <CurrencyConverter />
+        </div>
+
+        {/* Rates Sec */}
+        <RatesDashboard />
         
       </div>
     </main>

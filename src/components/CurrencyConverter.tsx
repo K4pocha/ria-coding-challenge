@@ -10,7 +10,7 @@ export default function CurrencyConverter() {
   const [amount, setAmount] = useState<number>(1);
   const [from, setFrom] = useState<string>('USD');
   const [to, setTo] = useState<string>('EUR');
-  
+
   // Estados para el resultado y la interfaz 
   const [result, setResult] = useState<number | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
@@ -26,10 +26,10 @@ export default function CurrencyConverter() {
   // Función que ejecuta la conversión
   const handleConvert = async () => {
     if (!amount) return;
-    
+
     setLoading(true);
     setError(null);
-    
+
     try {
       const val = await convertCurrency(amount, from, to);
       setResult(val);
