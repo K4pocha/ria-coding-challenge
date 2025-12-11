@@ -1,4 +1,3 @@
-// src/components/RatesDashboard.tsx
 'use client';
 
 import { useState, useEffect } from 'react';
@@ -29,7 +28,7 @@ export default function RatesDashboard() {
       .finally(() => setLoading(false));
   }, [base]);
 
-  // FUNCIÓN NUEVA: Obtener URL de la bandera desde FlagCDN
+  // Obtener URL de la bandera desde FlagCDN
   const getFlagUrl = (currencyCode: string) => {
     // Caso especial: Euro
     if (currencyCode === 'EUR') return 'https://flagcdn.com/w40/eu.png';
@@ -86,11 +85,11 @@ export default function RatesDashboard() {
                       alt={`Bandera de ${code}`} 
                       className="w-6 h-4 object-cover rounded-sm shadow-sm"
                       onError={(e) => {
-                        // Si falla la imagen (ej. Bitcoin), ponemos un icono genérico
+                        // Si falla la imagen, ponemos un icono genérico
                         (e.target as HTMLImageElement).src = 'https://flagcdn.com/w40/un.png';
                       }}
                     />
-                    {/* Nombre Largo (Código) */}
+                    {/* Nombre Largo  */}
                     <span>
                       {currencies[code] || code} <span className="text-gray-400 font-normal">({code})</span>
                     </span>

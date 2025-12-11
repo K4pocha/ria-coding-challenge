@@ -1,5 +1,6 @@
 import CurrencyConverter from '@/components/CurrencyConverter';
 import RatesDashboard from '@/components/RatesDashboard';
+import HistoricalChart from '@/components/HistoricalChart';  
 
 export default function Home() {
   return (
@@ -10,12 +11,16 @@ export default function Home() {
           <p className="text-gray-600">Internship Coding Challenge</p>
         </div>
 
-        {/* Converter Sec */}
+        {/* Convertidor */}
         <div className="mb-8">
             <CurrencyConverter />
         </div>
+        {/* Gráfico de Tendencia (Bonus) */}
+        <div className="mb-8">
+           <HistoricalChart />
+        </div>
 
-        {/* Rates Sec */}
+        {/* Dash de tasas*/}
         <RatesDashboard />
         
       </div>
