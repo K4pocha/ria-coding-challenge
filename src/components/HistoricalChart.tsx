@@ -107,7 +107,7 @@ export default function HistoricalChart() {
         )}
       </div>
       <p className="text-xs text-gray-400 mt-4">
-        Este gráfico ayuda a decidir el mejor momento para enviar dinero analizando la tendencia del último mes.
+        Este gráfico ayuda a decidir el mejor momento para enviar o cambiar dinero analizando la tendencia del último mes.
       </p>
     </div>
   );

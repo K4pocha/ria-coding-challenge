@@ -39,24 +39,25 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Grid de Componentes */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
 
-            {/* Columna Izquierda: Gráfico y Tasas (Ocupa más espacio en desktop) */}
-            <div className="lg:col-span-7 space-y-8 order-2 lg:order-1">
+            {/* Izquierda: Gráfico */}
+            <div className="lg:col-span-7 w-full">
               <HistoricalChart />
-              <RatesDashboard />
             </div>
 
-            {/* Columna Derecha: Convertidor (Sticky/Fijo para destacar) */}
-            <div className="lg:col-span-5 order-1 lg:order-2">
-              <div className="sticky top-24">
-                <CurrencyConverter />
-
-              </div>
+            {/* Derecha: Convertidor */}
+            <div className="lg:col-span-5 w-full sticky top-24">
+              <CurrencyConverter />
             </div>
 
           </div>
+
+          {/* SECCIÓN INFERIOR: Tabla de Tasas (Centrada y Ancho Completo) */}
+          <div className="w-full">
+            <RatesDashboard />
+          </div>
+
         </div>
       </main>
 

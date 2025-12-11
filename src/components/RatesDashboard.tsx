@@ -71,8 +71,8 @@ export default function RatesDashboard() {
           <table className="w-full text-left border-collapse">
             <thead>
               <tr className="border-b border-gray-200 bg-gray-50">
-                <th className="py-3 px-4 text-xs font-semibold text-gray-500 uppercase tracking-wider">Moneda</th>
-                <th className="py-3 px-4 text-xs font-semibold text-gray-500 uppercase tracking-wider text-right">Valor (1 {base})</th>
+                <th className="py-3 px-4 text-xs font-semibold text-gray-500 uppercase tracking-wider text-center">Moneda</th>
+                <th className="py-3 px-4 text-xs font-semibold text-gray-500 uppercase tracking-wider text-right ">Valor (1 {base})</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-gray-100">
